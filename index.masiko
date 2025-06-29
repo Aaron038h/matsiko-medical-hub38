@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matsiko Medical Hub</title>
+  <style>
+    /* Reset & Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+      color: #0056b3;
+    }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #007bff;
+    }
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: #007bff;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #0056b3;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec7b678f6641') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+    }
+
+    /* Services */
+    .services {
+      background: #fff;
+      padding: 4rem 1rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Why Us */
+    .why-us {
+      background: #e8f1ff;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .why-us ul {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      text-align: left;
+      list-style: none;
+    }
+    .why-us li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .why-us li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color:rgb(16, 93, 175);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #fff;
+      padding: 4rem 1rem;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    blockquote {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid #007bff;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Contact */
+    .contact {
+      background: #f1f1f1;
+      padding: 4rem 1rem;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #007bff;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">Matsiko Medical Hub</div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">Why Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Book Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Online Medical Clinic & Home Care Nursing</h1>
+      <p>24/7 Accessible, Compassionate & Professional Healthcare</p>
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>e‑Medical Consultations</h3>
+          <p>Online medical advice, prescriptions & wellness checks.</p>
+        </div>
+        <div class="card">
+          <h3>Home Nursing</h3>
+          <p>Registered nurses offering bedside care & treatment at home.</p>
+        </div>
+        <div class="card">
+          <h3>Post‑Operative Care</h3>
+          <p>Support recovery through tailored in-home medical services.</p>
+        </div>
+        <div class="card">
+          <h3>Physiotherapy</h3>
+          <p>Rehabilitation and therapy programs delivered at your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="about" class="why-us">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>Registered & Certified Medical Professionals</li>
+        <li>Personalized & Patient-Centered Care</li>
+        <li>Fast Online Consultations & Home Visits</li>
+        <li>Affordable Packages & Emergency Support</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-grid">
+        <blockquote>"Professional and caring. My mother received excellent nursing care at home." – Chloe.</blockquote>
+        <blockquote>"Seamless online consultation with quick follow-up care. Highly recommend!" – Aaron T.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: info@matsikomedicalhub@gmail.com | Phone: +256 758 265 859 : +256 781 524 960 : NABBINGO- KYENGERA</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Matsiko Medical Hub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
